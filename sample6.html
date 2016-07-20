@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app='app6' ng-cloak>
+<head>
+  <title>Sample 6</title>
+    <style>
+    [ng\:cloak], [ng-cloak], .ng-cloak{
+      display:none;
+    }
+
+    </style>
+</head>
+<body>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="ex6.js"></script>
+  <!-- <div ng-controller = "ctrl1 as parent" >
+
+    <p>Name: {{parent.name}}</p>
+    <p>Sound: {{parent.sound}}</p>
+    <button ng-click=parent.animalClick()>Animal Data</button>
+  </div> -->
+
+  <!-- <div ng-controller = "ctrl2 as dog" >
+    <p>Name: {{dog.child.name}}</p>
+    <p>Sound: {{dog.child.sound}}</p>
+    <button ng-click=dog.child.animalClick()>Dog Data</button>
+    <button ng-click=dog.child.dogClick()>More Dog Data</button>
+
+  </div> -->
+  <div ng-controller="ctrl1 as parent">
+
+        <p>Name : {{parent.name}}</p>
+        <p>Sound : {{parent.sound}}</p>
+        <button ng-click=parent.animalClick()>Animal Data</button><br>
+      </div>
+      <div ng-controller="ctrl2 as dog">
+      <p>Name : {{dog.child.name}}</p>
+      <p>Sound : {{dog.child.sound}}</p>
+
+      <button ng-click=dog.child.animalClick()>Dog Data</button><br><br>
+
+      <button ng-click=dog.child.dogData()>More Dog Data</button><br><br>
+
+       <input ng-model="dog.child.bark" /><br><br>
+       <span>New Bark : {{dog.child.bark}}</span>
+    </div>
+</body>
+</html>

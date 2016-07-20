@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app='app5' ng-cloak>
+<head>
+  <title>Sample 5</title>
+    <style>
+    [ng\:cloak], [ng-cloak], .ng-cloak{
+      display:none;
+    }
+    input.ng-dirty.ng-invalid{
+      border-color: red;
+    }
+
+    </style>
+</head>
+<body>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="ex5.js"></script>
+  <div ng-controller = "ctrl1" >
+    <label>Search for:</label>
+    <input type="text" ng-model="name">
+    <button ng-click="getName()">Search</button>
+     {{data}}
+  </div>
+<br>
+  <div ng-controller = "ctrl1" >
+    <label>Name:</label>
+    <input type="text" ng-model="name">
+    <button ng-click="addName(name)">Add</button>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html ng-app='app7' ng-cloak>
+<head>
+  <title>Sample 7</title>
+    <style>
+    [ng\:cloak], [ng-cloak], .ng-cloak{
+      display:none;
+    }
+    </style>
+</head>
+<body>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="ex7.js"></script>
+  <script src="rainyfilter.js"></script>
+  <div ng-controller="ctrl1">
+
+    <label>Name:</label>
+    <input type="text" ng-model="name">
+    <p>lowercase: {{name | lowercase}}</p>
+    <p>uppercase: {{name | uppercase}}</p>
+    <label>Currency filter: </label>
+    <input type="text" ng-model="money">
+    <p>currency{{money | currency}}</p>
+
+    <ul>
+      <li ng-repeat="student in student.gpas | filter : 'a' | orderBy: '-gpa'">
+        {{'Name: ' + student.name + ' : GPA : ' + student.gpa}}
+      </li>
+    </ul>
+
+    <label>Number Filter</label>
+    <input type="text" ng-model="numval">
+    <p>Default: {{numval | number}}</p>
+    <p>No Fraction: {{numval | number:0}}</p>
+    <p>Negative: {{-numval | number:4}}</p>
+
+
+        <p>date 1: {{currDate | date : 'medium'}}</p>
+        <p>date 2: {{currDate | date : "MM/dd/yyyy 'at' h:mma"}}</p>
+
+        <p>Default: {{randomStr}}</p>
+        <p>substring: {{randomStr | limitTo: 11}}</p>
+
+        <p>
+          <ul>
+            <li ng-repeat="x in randArray |limitTo:4">
+              {{x}}
+            </li>
+          </ul>
+        </p>
+
+        <p>
+          <ul>
+            <li ng-repeat="x in weather">
+              {{x.day + " : "}}  {{x.rain | raining}}
+            </li>
+          </ul>
+        </p>
+  </div>
+</body>
+</html>

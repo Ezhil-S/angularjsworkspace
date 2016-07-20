@@ -1,0 +1,23 @@
+<!doctype html>
+<html ng-app='app6' ng-cloak>
+<head>
+  <title>Sample 5</title>
+    <style>
+    [ng\:cloak], [ng-cloak], .ng-cloak{
+      display:none;
+    }
+    input.ng-dirty.ng-invalid{
+      border-color: red;
+    }
+
+    </style>
+</head>
+<body>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="try.js"></script>
+  <div ng-controller = "ctrl1">
+<input ng-model="Name"/>
+    <p>{{firstName}}</p>
+  </div>
+</body>
+</html>

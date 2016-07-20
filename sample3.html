@@ -1,0 +1,59 @@
+<!doctype html>
+<html ng-app='app3' ng-cloak>
+<head>
+  <title>Sample 3</title>
+    <style>
+    [ng\:cloak], [ng-cloak], .ng-cloak{
+      display:none;
+    }
+    input.ng-dirty.ng-invalid{
+      border-color: red;
+    }
+    .bg{
+      background-color: grey;
+    }
+    .bg1{
+      background-color: #fe5670;
+    }
+    </style>
+</head>
+<body>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="ex3.js"></script>
+  <div ng-controller = "ctrl1" >
+    <table>
+      <thead class="bg">
+        <tr>
+          <th>Item</th>
+          <th>No</th>
+        </tr>
+      </thead>
+      <tbody  class="bg1">
+        <tr ng-repeat="x in alphabets">
+          <td>{{x.item}}</td>
+          <td>{{x.no}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+
+   <form name="myForm">
+    <label>New item name:
+      <span style="color:red">
+      <span ng-show="myForm.name.$error.required">*</span>
+      </span>
+      <input type="text" name="name" ng-model= "newItem" required />
+    </label>
+    <br><br>
+    <label>New item value:
+      <span style="color:red">
+      <span ng-show="myForm.value.$error.required">*</span>
+      </span>
+      <input type="text" name="value" ng-model= "newvalue" required/>
+    </label>
+    <br><br>
+    <button ng-click="addItem(newItem,newvalue)">Add Item and no</button>
+  </form>
+  </div>
+</body>
+</html>

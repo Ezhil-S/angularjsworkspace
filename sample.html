@@ -1,0 +1,77 @@
+<!doctype html>
+<html ng-app='app1'>
+<head>
+  <title>Sample</title>
+  <style>
+  [ng\:cloak], [ng-cloak], .ng-cloak{
+    display:none;
+  }
+  .blueText{
+    color:blue;
+    background-color: grey;
+  }
+  .stripedBeige{
+    color:#CC0000;
+    background-color: #F5F500;
+  }
+  </style>
+</head>
+<body>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="ex.js"></script>
+  <div ng-controller="ctrl1">
+    <span>Values:</span>
+    <input type="text" ng-model="first"/>
+    <input type="text" ng-model="second"/>
+
+    <button ng-click="updateValue()">Sum</button>
+    <br><br>
+
+    {{calculate}}
+
+   <p>first={{first}}</p>
+   <p>second=<span data-ng-bind="second"></span></p>
+
+  </div>
+  <div ng-controller ='ctrl2'>
+    <input ng-blur="blur = blur + 1"
+            ng-focus="focus = focus + 1"
+            ng-copy="copy = copy + 1"
+            ng-keydown = "keydown($event)"
+            ng-mouseenter = " mouseenter = mouseenter + 1"
+            ng-mouseleave = "mouseleave = mouseleave + 1 "
+            ng-change = "change = change + 1"
+            ng-model = "abc"
+            />
+    <h6>Blur Events: {{blur}} </h6>
+    <h6>Focus Events: {{focus}} </h6>
+    <h6>Copy Events: {{copy}} </h6>
+    <h6> Key Pressed : {{kdKey}} </h6>
+    <h6> Mouse Enter events : {{mouseenter}} </h6>
+    <h6> Change Events: {{change}} </h6>
+
+
+    <p><input type = "checkbox" ng-model = "disableButton">Agree</button>
+    <p><button ng-disabled = "!disableButton">Sign Up</button></p>
+
+
+    <p>
+      <select ng-model="textStyling">
+        <option value="blueText">Blue text</option>
+        <option value="stripedBeige">stripedbeige text</option>
+      </select>
+   </p>
+   <p ng-class = "textStyling"> Hii</p>
+
+   <table>
+     <tr ng-repeat="x in alphabets"
+     ng-class-odd="'blueText'"
+     ng-class-even="'stripedBeige'">
+       <td>{{x.item}}</td>
+       <td>{{x.no}}</td>
+     </tr>
+   </table>
+  </div>
+
+</body>
+</html>

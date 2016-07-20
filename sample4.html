@@ -1,0 +1,50 @@
+<!doctype html>
+<html ng-app='app4' ng-cloak>
+<head>
+  <title>Sample 4</title>
+    <style>
+    [ng\:cloak], [ng-cloak], .ng-cloak{
+      display:none;
+    }
+    input.ng-dirty.ng-invalid{
+      border-color: red;
+    }
+
+    </style>
+</head>
+<body>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="ex4.js"></script>
+  <div ng-controller = "ctrl1" >
+      <form name="userForm">
+        <label>First Name:</label>
+        <span class="error-message" style="color:red" ng-show="userForm.fName.$error.required">*
+         </span>
+         <span class="error-message" ng-show="userForm.fName.$dirty
+           && userForm.fName.$error.minlength"></span>
+        <input type="text" name="fName" ng-model="userInfo.fName"
+        ng-required="true" ng-minlength="2" />
+        <br><br>
+
+        <label>Last Name:</label>
+        <span class="error-message" style="color:red" ng-show="userForm.lName.$error.required">*
+         </span>
+         <span class="error-message" ng-show="userForm.lName.$dirty
+           && userForm.lName.$error.minlength"></span>
+        <input type="text" name="lName" ng-model="userInfo.lName"
+           ng-required="true" ng-minlength="2" />
+        <br><br>
+
+        <label>Password:</label>
+        <span class="error-message" style="color:red" ng-show="userForm.password.$error.required">*
+        </span>
+        <span class="error-message" ng-show="userForm.password.$dirty
+              && userForm.password.$error.minlength"></span>
+        <input type="text" name="password" ng-model="userInfo.password"
+              ng-required="true" ng-minlength="8" />
+        <input type="submit" value="Save" ng-disabled="userForm.$invalid"/>
+        </form>
+  </div>
+
+</body>
+</html>

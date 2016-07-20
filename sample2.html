@@ -1,0 +1,59 @@
+<!doctype html>
+<html ng-app='app2' ng-cloak>
+<head>
+  <title>Sample 2</title>
+    <style>
+    [ng\:cloak], [ng-cloak], .ng-cloak{
+      display:none;
+    }
+    </style>
+</head>
+<body>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="ex2.js"></script>
+  <h4 ng-controller='ctrl1'>First random number:{{randomnum1}}</h4>
+  <h4 ng-controller='ctrl1'>Second random number:{{randomnum2}}</h4>
+
+
+  <div id="list" ng-controller="ctrl2">
+    <h3 class="ListTitle">Alphabets {{alphabets.length}}</h3>
+    <ol>
+      <li>{{alphabets[0].item}}</li>
+    </ol>
+    <ol start="2">
+      <li ng-repeat="x in alphabets" ng-if="$index > 0">
+        {{x.item}}  {{$index}}
+      </li>
+    </ol>
+
+    <table>
+      <tr ng-repeat-start = "x in alphabets">
+        <td>
+          {{x.item}}
+        </td>
+      <tr ng-repeat-end>
+        <td>
+          {{x.no}}
+        </td>
+      </tr>
+    </table>
+
+    <label>Change first item:</label>
+    <input ng-model= "alphabets[0].item" />
+
+    <h3>List</h3>
+    <div ng-include="'ullist.html'"></div>
+
+    <input type="checkbox" ng-model="showList"></input>
+
+    <ng-include src="getList()"></ng-include>
+
+    <form name="input">
+      email:
+      <input type="email" name="mailid" ng-model="text">
+      <span ng-show= "input.mailid.$error.email">Invalid email address</span>
+      </input>
+   </form>
+  </div>
+</body>
+</html>
