@@ -1,0 +1,59 @@
+{
+  "usersInChannels": [
+    {
+      "id": 1,
+      "name": "ezhil",
+      "channelId": 1
+    },
+    {
+      "id": 2,
+      "name": "soumya",
+      "channelId": 1
+    },
+    {
+      "id": 3,
+      "name": "monika",
+      "channelId": 1
+    },
+    {
+      "name": "krishna",
+      "channelId": 1,
+      "id": 4
+    },
+    {
+      "name": "sandhya",
+      "id": 5
+    },
+    {
+      "name": "ashish",
+      "id": 6
+    },
+    {
+      "name": "gourav",
+      "id": 7
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "user": "ezhil",
+      "type": "text",
+      "content": "hii"
+    },
+    {
+      "channelId": 3101,
+      "date": "2016-07-26T03:49:27.222Z",
+      "user": "ezhil",
+      "type": "text",
+      "content": "dfsg",
+      "id": 2
+    },
+    {
+      "channelId": 3101,
+      "user": "ezhil",
+      "type": "text",
+      "content": "dghdh",
+      "id": 3
+    }
+  ]
+}

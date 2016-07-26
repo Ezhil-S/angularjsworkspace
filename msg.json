@@ -1,0 +1,122 @@
+{
+  "channel": [
+    {
+      "id": 1,
+      "pName": "sgjdfshsdg",
+      "cName": "ranjthdfbhsdfhbsdftm"
+    },
+    {
+      "pName": "dtfhb",
+      "cName": "rech",
+      "id": 2
+    }
+  ],
+  "messages": [
+    {
+      "channelId": 3101,
+      "time": "",
+      "date": "",
+      "user": "ezhil",
+      "type": "text",
+      "content": "hello",
+      "id": 1
+    },
+    {
+      "channelId": 3101,
+      "time": "",
+      "date": "",
+      "user": "ezhil",
+      "type": "text",
+      "content": "hello",
+      "id": 2
+    },
+    {
+      "channelId": 3101,
+      "user": "ezhil",
+      "type": "text",
+      "content": "dfgsdg",
+      "id": 3
+    },
+    {
+      "channelId": 3101,
+      "user": "ezhil",
+      "type": "text",
+      "content": "tryeyy",
+      "id": 4
+    },
+    {
+      "channelId": 3101,
+      "date": "2016-07-25T13:00:03.362Z",
+      "user": "ezhil",
+      "type": "text",
+      "content": "weyt",
+      "id": 5
+    },
+    {
+      "channelId": 3101,
+      "date": "2016-07-25T13:00:10.018Z",
+      "user": "ezhil",
+      "type": "text",
+      "content": "hbmj",
+      "id": 6
+    },
+    {
+      "channelId": 3101,
+      "date": "2016-07-25T13:00:21.600Z",
+      "user": "ezhil",
+      "type": "text",
+      "content": "weee",
+      "id": 7
+    },
+    {
+      "channelId": 3101,
+      "date": "2016-07-25T13:00:42.008Z",
+      "user": "ezhil",
+      "type": "text",
+      "content": "rtyryy",
+      "id": 8
+    },
+    {
+      "channelId": 3101,
+      "date": "2016-07-25T13:03:06.503Z",
+      "user": "ezhil",
+      "type": "text",
+      "content": "ersgfv",
+      "id": 9
+    },
+    {
+      "channelId": 3101,
+      "date": "2016-07-25T13:03:54.686Z",
+      "user": "ezhil",
+      "type": "text",
+      "content": "dfgfgf",
+      "id": 10
+    },
+    {
+      "channelId": 3101,
+      "user": "ezhil",
+      "type": "text",
+      "content": "dfg",
+      "id": 11
+    },
+    {
+      "channelId": 3101,
+      "user": "ezhil",
+      "type": "text",
+      "id": 12
+    },
+    {
+      "channelId": 3101,
+      "user": "ezhil",
+      "type": "text",
+      "id": 13
+    },
+    {
+      "channelId": 3101,
+      "user": "ezhil",
+      "type": "text",
+      "content": "hjghj",
+      "id": 14
+    }
+  ]
+}

@@ -1,23 +1,50 @@
-<!doctype html>
-<html ng-app='app6' ng-cloak>
+<!DOCTYPE html>
+<html ng-app="app" ng-cloak>
 <head>
-  <title>Sample 5</title>
-    <style>
-    [ng\:cloak], [ng-cloak], .ng-cloak{
-      display:none;
-    }
-    input.ng-dirty.ng-invalid{
-      border-color: red;
-    }
+ <meta charset="utf-8">
+ <title>Excersice</title>
 
-    </style>
+ <meta name="description" content="">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ <link href="bs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+ <link href="bs/includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+ <link href="try.css" rel="stylesheet">
+ <script src="bs/includes/js/modernizr-2.6.2.min.js"></script>
+ <style>
+ [ng\:cloak], [ng-cloak], .ng-cloak {
+   display: none;
+ }
+ #autoscroll {
+   height: 450px;
+   overflow: scroll;
+ }
+ </style>
 </head>
-<body>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-  <script src="try.js"></script>
-  <div ng-controller = "ctrl1">
-<input ng-model="Name"/>
-    <p>{{firstName}}</p>
-  </div>
+<body >
+ <div ng-controller="control1" class="chat" >
+   <div id="autoscroll">
+   <span ng-repeat="message in messages">
+     <div >
+       {{message.name}}:{{message.message}}
+       <p>date: {{message.date | date : "MM/dd/yyyy 'at' h:mma"}}</p>
+     </div>
+
+   </span>
+</div>
+<div>
+   <form class="form">
+      <input type="text area" name="message" class="message" placeholder="Enter message" ng-model="message">
+      <button class="btn btn-xs btn-success buton" ng-click="sendmessage(message,message.date)">
+               <span class="glyphicon glyphicon-send"></span>&nbsp;
+      </button>
+
+   </div></form>
+</div>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+ <script src="try.js"></script>
+ <script src="http://code.jquery.com/jquery.js"></script>
+ <script>window.jQuery || document.write('<script src="bs/includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+ <script src="bs/bootstrap/js/bootstrap.min.js"></script>
+ <script src="bs/includes/js/script.js"></script>
 </body>
 </html>

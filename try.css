@@ -1,0 +1,26 @@
+
+.chat{
+height:500px;
+width:400px;
+border:  2px solid black;
+margin-top: 70px;
+margin-left:450px;
+position: relative;
+}
+
+
+.message{
+width:350px;
+height:30px;
+position:absolute;
+top:460px;
+left:3px;
+}
+
+.buton{
+position: absolute;
+top: 460px;
+left: 355px;
+width:40px;
+height:30px;
+}

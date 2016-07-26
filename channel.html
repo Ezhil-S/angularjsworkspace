@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app = 'app1' ng-cloak>
+<head>
+  <title>A channel</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+  [ng\:cloak], [ng-cloak], .ng-cloak{
+    display:none;
+  }
+  </style>
+</head>
+<body>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="channel.js"></script>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Troupe</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> My Profile</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="col-6">
+  <div ng-controller='ctrl1'>
+    <ul>
+    <li ng-repeat="x in member">{{x.name}}</li>
+    </ul>
+    <input ng-model='newMember'/>
+    <button ng-click="addMember()"><span class="glyphicon glyphicon-plus"></span></button>
+  </div>
+</div>
+</body>
+</html>
